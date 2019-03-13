@@ -1,0 +1,52 @@
+You need to create a simple text-based BlackJack game
+The game needs to have one player versus an automated dealer.
+The player can stand or hit.
+The player must be able to pick their betting amount.
+You need to keep track of the player's total money.
+You need to alert the player of wins, losses, or busts, etc...
+You must use OOP and classes in some portion of your game.
+
+
+start
+  intro - print text on screen talking about game
+  tell player he starts with a bankroll of $100
+
+  ask player if he wants to play a hand or quit
+  if yes
+    print indicator saying deck is being shuffled
+    print 2 player cards - both face up
+    print dealer card - with 1 card down, 1 card up
+    ask player what he wants to bet? (minimum bet is 5)
+    check if it is less than his bankdroll and greater or equal to $5
+
+    check if dealer has 21
+     if yes then computer wins pot
+        return   (to asking if player wants to play hand)
+    ask player if he wants to hit or stay
+      - if player chooses hits
+	give player a card
+	sum hand
+	check if player has 21
+		if yes - then player wins pot
+		start next hand (break)
+	if hand greater than 21
+		if player has ace, hand = hand - 10
+		break
+	else
+                          player busts and computer gets pot and next hand starts
+        else if chooses stay
+
+        computer reveals 2nd card	
+        computer chooses to stay or take a card
+        if computer takes card
+	if dealer have 21
+	   dealer wins
+	   break (to restart hand)
+       	 if dealer is over 21
+	   dealer loses (subtract amount from dealer)
+	 return (to asking if dealer will take a card)
+        else if computer stays
+        compare dealer and player hands
+        person with highest hand wins
+             dealer wins or player wins
+        return to play next hand
