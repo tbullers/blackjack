@@ -142,7 +142,7 @@ if __name__ == "__main__":
     except:
         print("Cannot create an account - bad initial bank role amount")
 
-    print("the player's balance is ->" + str(player_account.balance))
+    print("The player's account is created with balance: $" + str(player_account.balance))
 
     while ready_to_play():
         deck = Deck()
@@ -153,7 +153,6 @@ if __name__ == "__main__":
         while True:
 #           dealer_hand = deck.draw(2)
             print("Your account balance is $ " + str(player_account.balance) + "\n")
-#            response = (input("How much would you like to bet? (must be between $ "+MIN_BET+" and $ "+str(player_account.balance))
             response = (input("How much would you like to bet ?:"))
             (isvalid, amount) = sanitize_input(response)
             if isvalid and (amount >= MIN_BET):
